@@ -1,0 +1,19 @@
+<%- include("partials/header") -%> 
+
+
+    <div class="allPostsContainer">
+        <% allArticles.forEach(function(post) { %>
+            <div class="post">
+                <h1 class="section-heading" style="font-size: 2rem;"><%=post.title%></h1>
+                <p><%- post.content.substring(0,400) %>...</p>
+                <div class="button-4">
+                    <div class="eff-4"></div>
+                    <a href="/posts/<%=post.title%>"> Read More! </a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+
+
+<%- include("partials/footer") -%> 

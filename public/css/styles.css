@@ -1,0 +1,186 @@
+footer {
+  padding: 3% 5%;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+}
+p {
+  font-family: 'DM Sans', sans-serif;
+  line-height: 2;
+  font-size: 18px;
+  text-align: justify;
+}
+
+html,body { height:100%; }
+
+/*
+font-family: 'DM Mono', monospace;
+font-family: 'DM Sans', sans-serif;
+font-family: 'DM Serif Display', serif;
+ */
+
+.section-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  line-height: 2;
+}
+.project-heading {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+.project-explain {
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.home {
+  background-color: #4F091D;
+  text-align: center;
+  padding: 33vh 15%;
+}
+.me-big {
+  margin: 0 7%;
+}
+.about {
+padding: 7% 15%;
+background-color: #bbdbbe;
+}
+.coding-exhibition {
+  padding: 7% 15%;
+  background-color: #4F091D;
+  color: white;
+}
+
+
+.image {
+  height: 90%;
+  width: 90%;
+}
+.betamat {
+  padding: 7% 15%;
+  background-color: #bbdbbe
+}
+.maths {
+  padding: 7% 15%;
+  background-color: #4F091D;
+  color: white;
+}
+
+
+.bookrec {
+  background-color: #bbdbbe;
+  padding: 7% 15%;
+
+}
+
+/* Single Post Page */
+.singlePost {
+  padding: 5% 7%; 
+  background-color: #E4D1B9;
+  text-align: center;
+}
+
+
+/* Compose Page */
+.composeForm {
+  margin: 5% 5% ;
+  font-size: 15px;
+  text-align: center;
+}
+
+.form-labels {
+  font-family: 'DM Serif Display', serif;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 800; 
+  color: rgb(249, 9, 213);
+}
+
+
+.form-control {
+  padding-top: 10px;
+}
+
+/* Blog Page */
+.post {
+  text-align: center;
+  padding: 0 3%;
+  margin-bottom: 3%;
+  border-bottom: #4F091D;
+}
+
+.allPostsContainer {
+  padding: 5%;
+  background-color: #E4D1B9;
+}
+
+ /* For that special buttons */
+.button-4{
+  width:140px;
+  height:40px;
+  border:2px solid #0a6325;
+  float:left;
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+.button-4 a{
+  font-family:arial;
+  font-size:16px;
+  color:#0a6325;
+  text-decoration:none;
+  line-height:40px;
+  transition:all .5s ease;
+  z-index:2;
+  position:relative;
+}
+.eff-4{
+  width:140px;
+  height:50px;
+  left:-140px;
+  background:#0a6325;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:1;
+}
+.button-4:hover .eff-4{
+  left:0;
+}
+.button-4:hover a{
+  color:#fff;
+}
+
+
+/*#8fc866*/
+
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 1.5s steps(44) 0.5s 1 normal both,
+    blink-caret 500ms steps(44) infinite normal;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 30.5%}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

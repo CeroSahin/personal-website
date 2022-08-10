@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+<div class=" singlePost">
+    <h1 class="form-labels">Compose</h1>
+    <form class="composeForm" action="/compose" method="post">
+      <input type="hidden" name="isEdited" value="<%= given ? post.title : null %>"></label>
+      <label><h3 class="form-labels" >Title</h3></label>
+      <br>
+      <label class="form-labels" for="password">Password</label> 
+      <br>
+      <input type="password" name="password" class="form-control">
+      <br>
+      <input class="form-control" type="text" name="postTitle" value="<%= given ? post.title : null%>">
+      <br>
+      <br>
+      <textarea class="form-control" name="content" id="editor" cols="30" rows="10" ></textarea>
+      <br>
+      <button class="btn btn-dark form-labels" type="submit" name="button">Publish</button>
+    </form>
+
+    <script>
+        ClassicEditor
+        .create(document.querySelector("#editor"))
+        .then(editor => {
+          editor.setData("<%- given ? post.content : null %>");
+        })
+        .catch(error => {console.log(error)})
+    </script>
+
+</div>
+
+
+<%- include("partials/footer"); -%>
+

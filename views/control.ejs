@@ -1,0 +1,24 @@
+<%- include("partials/header"); %> 
+
+<section>
+    <div class="singlePost">
+        <form class="composeForm" action="/handle" method="post">
+            <% if (msg != null) { %>
+                <p><%=msg%></p>
+            <% } %> 
+            <label class="form-labels" for="actions">Select an action</label> <br>
+            <select name="actions" id="actions" name="actions">
+                <option value="delete">Delete a post</option>
+                <option value="edit">Edit a post</option>
+            </select> <br>
+            <label class="form-labels">Post Title</label> <br>
+            <input class="form-control" type="text" name="postTitle"> <br>
+            <label class="form-labels" for="password">Password</label> <br>
+            <input class="form-control" type="password" name="password"> <br>
+            <button class="btn btn-dark form-labels" type="submit">Continue</button>
+        </form>
+    </div>
+</section>
+
+
+<%- include("partials/footer"); %>

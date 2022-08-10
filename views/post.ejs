@@ -1,0 +1,18 @@
+<%- include("partials/header") -%> 
+
+<div class="singlePost">
+    <div class="post">
+        <h1 class="section-heading" style="font-size: 2rem;"><%=foundPost.title%></h1>
+        <p>Written by Ceren Şahin in <%=foundPost.date%></p>
+        <br>
+        <p><%- foundPost.content %></p>
+        <div class="button-4">
+            <div class="eff-4"></div>
+            <a href="/blog"> Other posts. </a>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer") -%> 

@@ -88,7 +88,7 @@ app.post("/compose", async function(req, res) {
   const editedDate = today.toLocaleDateString("tr");
 
   if (isEdited != "") {
-    console.log("I'm here trying to edit.");
+    console.log("I'm here trying to edit!");
     // edit the post.
     const updatedPost = await Post.updateOne({title : isEdited}, {
       title : newPostTitle,

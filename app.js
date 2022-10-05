@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -17,7 +18,14 @@ app.use(bodyParser.urlencoded({
 
 const port  = process.env.PORT || 5000;
 
-mongoose.connect("mongodb://localhost:27017/archiveDB");
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log("DB CONNECTED!");
+  });
 
 const postSchema = new mongoose.Schema({
   title: String,

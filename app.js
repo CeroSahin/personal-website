@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-const port  = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.DATABASE, {
@@ -166,6 +165,12 @@ app.post("/handle", function(req, res) {
 
 });
 
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
 app.listen(port, function() {
-  console.log("Server started on port 3000.");
+  console.log("Server has started successfully.");
 })

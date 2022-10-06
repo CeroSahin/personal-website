@@ -1,4 +1,3 @@
-// require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -19,7 +18,7 @@ app.use(bodyParser.urlencoded({
 const port  = process.env.PORT || 5000;
 
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect("mongodb+srv://ceronimo:Toros1989@cluster0.9ceguss.mongodb.net/archiveDB", {
     useNewUrlParser:true,
     useUnifiedTopology: true
   })

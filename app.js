@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 
 
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect("mongodb+srv://ceronimo:Toros1989@cluster0.9ceguss.mongodb.net/archiveDB", {
     useNewUrlParser:true,
     useUnifiedTopology: true
   })

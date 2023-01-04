@@ -145,7 +145,7 @@ app.post("/handle", function(req, res) {
 
     } else if (actions === "delete") {
 
-      // delete the post
+      // delete the post..
       Post.deleteOne({title:postTitle}, function(err, foundPost) {
         if (foundPost != null) {
           res.redirect("/blog");
